@@ -1,6 +1,5 @@
 package com.tut;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Date;
 
@@ -36,7 +35,7 @@ public class App
         address.setStreet("Street1");
         address.setCity("Nagpur");
         address.setAddeDate(new Date());
-        address.isOpen(true);
+        address.setOpen(true);
         address.setX(455.046);
         
 //        FileInputStream fis = new FileInputStream("src/main/java/icon.png");
