@@ -14,10 +14,10 @@ public class FetchDemo {
 		Session session = factory.openSession();
 		
 		// get()
-		Student student = session.get(Student.class, 102);
+		Student student = session.get(Student.class, 103);
 		System.out.println(student);
 		Student student1 = session.get(Student.class, 103); // use Session Caches object.
-//		System.out.println(student1);
+		System.out.println(student1);
 		
 		System.out.println("\n----------------------------\n");
 		
