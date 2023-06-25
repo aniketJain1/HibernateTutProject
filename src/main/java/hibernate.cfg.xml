@@ -10,10 +10,14 @@
 		<property name="connection.username">root</property>
 		<property name="conncetion.password"></property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
 		<mapping class="com.tut.Student"/>
 		<mapping class="com.tut.Address"/>
 		<mapping class="com.tut.embedding.StudentEm"/>	
+		<mapping class="com.tut.mapping_one_to_one.Answer" />
+		<mapping class="com.tut.mapping_one_to_one.Question" />
+		<mapping class="com.tut.mapping_one_to_many.Answer" />
+		<mapping class="com.tut.mapping_one_to_many.Question" />
 	</session-factory>
 </hibernate-configuration>
