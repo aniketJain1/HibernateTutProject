@@ -21,6 +21,7 @@
 		<mapping class="com.tut.mapping_one_to_many.Question" />
 		<mapping class="com.tut.mapping_many_to_many.Emp" />
 		<mapping class="com.tut.mapping_many_to_many.Project" />
+		<mapping class="com.tut.states.StudentStates" />
 		
 	</session-factory>
 </hibernate-configuration>
