@@ -3,6 +3,7 @@ package com.tut.mapping_one_to_many;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
@@ -13,7 +14,7 @@ public class Question {
 	private int questionId;
 	private String question;
 	
-	@OneToMany(mappedBy = "question")
+	@OneToMany(mappedBy = "question", fetch = FetchType.EAGER) // by default LAZY
 	private List<Answer> answers;
 
 	public int getQuestionId() {
