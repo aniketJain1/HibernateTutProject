@@ -12,13 +12,21 @@
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
-		<!-- <mapping class="com.tut.Student"/>
+		<mapping class="com.tut.Student"/>
+		<!--
 		<mapping class="com.tut.Address"/>
 		<mapping class="com.tut.embedding.StudentEm"/>	
 		<mapping class="com.tut.mapping_one_to_one.Answer" />
 		<mapping class="com.tut.mapping_one_to_one.Question" /> -->
-		<mapping class="com.tut.mapping_one_to_many.Answer" />
-		<mapping class="com.tut.mapping_one_to_many.Question" />
+		
+		<!-- <mapping class="com.tut.mapping_one_to_many.Answer" />
+		<mapping class="com.tut.mapping_one_to_many.Question" /> -->
+		
+		
+		<mapping class="com.tut.cascade.Answer" />
+		<mapping class="com.tut.cascade.Question" />
+		
+		
 		<!-- <mapping class="com.tut.mapping_many_to_many.Emp" />
 		<mapping class="com.tut.mapping_many_to_many.Project" />
 		<mapping class="com.tut.states.StudentStates" /> -->

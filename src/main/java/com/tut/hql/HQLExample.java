@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
+import org.hibernate.query.*;
 
 import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
 import com.tut.Student;
@@ -23,27 +23,27 @@ public class HQLExample {
 
 		// HQL
 		// Syntax
-		String query = "from Student as s where s.city=:x and s.name=:y";
-
-		Query<Student> q = s.createQuery(query);
-		q.setParameter("x", "mumbai");
-		q.setParameter("y", "shri");
-
-		// single - (unique)
-		// multiple-list
-
-		List<Student> list = q.list();
+//		String query = "from Student as s where s.city=:x and s.name=:y";
+//
+//		Query<Student> q = s.createQuery(query);
+//		q.setParameter("x", "mumbai");
+//		q.setParameter("y", "shri");
+//
+//		// single - (unique)
+//		// multiple-list
+//
+//		List<Student> list = q.list();
+//		
+//		System.out.println("a");
+//
+//		for (Student student : list) {
+//			System.out.println(student.getName() + " " + student.getCity());
+//		}
+//		
+//		System.out.println("===============================");
 		
-		System.out.println("a");
-
-		for (Student student : list) {
-			System.out.println(student.getName() + " " + student.getCity());
-		}
 		
-		System.out.println("===============================");
-		
-		
-		Transaction tx = s.beginTransaction();
+//		Transaction tx = s.beginTransaction();
 		
 //		 Delete query
 //		Query<Student> q2 = s.createQuery("delete from Student as s where s.city=:c");
@@ -59,10 +59,10 @@ public class HQLExample {
 //		int r = q2.executeUpdate();
 //		System.out.println("Updated : "+ r);
 		
-		tx.commit();
+//		tx.commit();
 		
 //		how to execute join query
-		Query q3 = s.createQuery("select q.question , q.questionId, q.answers from Map_Many_To_One_Question as q INNER JOIN q.answers as a");
+		Query q3 = s.createQuery("select q.question , q.questionId, a.answer from Map_Many_To_One_Question as q INNER JOIN q.answers as a");
 		
 		List<Object []> list3 = q3.getResultList();
 		
