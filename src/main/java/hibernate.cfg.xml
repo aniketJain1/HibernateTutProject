@@ -22,10 +22,10 @@
 		<!-- <mapping class="com.tut.mapping_one_to_many.Answer" />
 		<mapping class="com.tut.mapping_one_to_many.Question" /> -->
 		
-		
+		<!-- 
 		<mapping class="com.tut.cascade.Answer" />
 		<mapping class="com.tut.cascade.Question" />
-		
+		 -->
 		
 		<!-- <mapping class="com.tut.mapping_many_to_many.Emp" />
 		<mapping class="com.tut.mapping_many_to_many.Project" />
